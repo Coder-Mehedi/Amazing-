@@ -1056,8 +1056,7 @@ li:hover .sub-menu {
 	padding: 0;
 	line-height: 1.1538;/*150*/
 	font-size: 4.714em;/*132*/
-	font-weight: 700;
-	color: #fff;
+	font-weight: 700;	/*color: #fff;*/
 }
 
 .bnrTxt h2::after {
@@ -1095,7 +1094,8 @@ li:hover .sub-menu {
 }
 
 .business_bnr h1 span, .homeBnrTxt h1 span {
-	color: #f9a621
+
+	/*color: #f9a621*/
 }
 
 .homeBnrTxt p, .business_bnr p {
@@ -1276,7 +1276,7 @@ a.bnrBtn2 {
 }
 
 /******************************************
-	freeTrial Styles.
+freeTrial Styles.
 *******************************************/
 .freeTrial {
 	width: 100%;
@@ -1428,7 +1428,7 @@ a.ftBtn:hover {
 }
 
 /******************************************
-	gRating Styles.
+gRating Styles.
 *******************************************/
 .gRating {
 	text-align: center
@@ -1765,7 +1765,7 @@ a.ftBtn:hover {
 }
 
 /******************************************
-	myServices Styles.
+myServices Styles.
 *******************************************/
 .myServices {
 	width: 100%;
@@ -1899,7 +1899,7 @@ a.ftBtn:hover {
 }
 
 /******************************************
-	About Styles.
+About Styles.
 *******************************************/
 .cmnTxtBox h2, .txtImgSec h2, [class*='aboutSec-'] h2 {
 	padding: 12px 0;
@@ -2192,7 +2192,7 @@ a.ftBtn:hover {
 }
 
 /******************************************
-	Service Styles.
+Service Styles.
 *******************************************/
 .serviceBtm {
 	max-width: 1550px;
@@ -2572,7 +2572,7 @@ a.ftBtn:hover {
 }
 
 /******************************************
-	Clients Styles.
+Clients Styles.
 *******************************************/
 .clients {
 	width: 100%;
@@ -2643,7 +2643,7 @@ a.ftBtn:hover {
 }
 
 /******************************************
-	Footer Styles.
+Footer Styles.
 *******************************************/
 .footer {
 	width: 100%;
@@ -2752,7 +2752,7 @@ a.ftBtn:hover {
 }
 
 /******************************************
-	gPopup Styles.
+gPopup Styles.
 *******************************************/
 amp-lightbox {
 	background: url(image/gPopup.png) repeat-y left top;
@@ -2800,7 +2800,7 @@ amp-lightbox {
 }
 
 /******************************************
-	Blog Styles.
+Blog Styles.
 *******************************************/
 .blogCont {
 	margin: auto;
@@ -3254,7 +3254,7 @@ h2::after {
 }
 
 /******************************************
-	Services Styles.
+Services Styles.
 *******************************************/
 .services {
 	margin: auto;
@@ -3385,7 +3385,7 @@ h2::after {
 }
 
 /******************************************
-	contactMe Styles.
+contactMe Styles.
 *******************************************/
 .contactMe {
 	padding: 15px;
@@ -3406,8 +3406,7 @@ h2::after {
 	position: relative;
 	line-height: 1.2333;/*74*/
 	font-size: 2.143em;/*60*/
-	font-weight: 500;
-	color: #fff;
+	font-weight: 500;	/*color: #fff;*/
 }
 
 .contactMe h1::after {
@@ -3427,8 +3426,7 @@ h2::after {
 	margin: 0 0 55px;
 	line-height: 2;/*64*/
 	font-size: 1.143em;/*32*/
-	font-weight: 500;
-	color: #fff;
+	font-weight: 500;	/*color: #fff;*/
 }
 
 .contactMe form {
@@ -3551,7 +3549,7 @@ h2::after {
 }
 
 /******************************************
-	Videos Styles.
+Videos Styles.
 *******************************************/
 .videos {
 	width: 100%;
@@ -4064,7 +4062,7 @@ amp-selector [option][selected] {
 }
 
 /******************************************
-	CourseCurriculum Styles.
+CourseCurriculum Styles.
 *******************************************/
 .courseVdo {
 	width: 100%;
@@ -4204,7 +4202,7 @@ amp-selector [option][selected] {
 }
 
 /******************************************
-	Instructor Styles.
+Instructor Styles.
 *******************************************/
 .instructor {
 	border-bottom: 1px solid #c5c5c5
@@ -4262,7 +4260,7 @@ amp-selector [option][selected] {
 }
 
 /******************************************
-	Certificate Styles.
+Certificate Styles.
 *******************************************/
 .certificate {
 	width: 100%;
@@ -4326,7 +4324,7 @@ amp-selector [option][selected] {
 }
 
 /******************************************
-	thankyou Styles.
+thankyou Styles.
 *******************************************/
 .thankyou {
 	width: 100%;
@@ -4406,4 +4404,8 @@ amp-selector [option][selected] {
 		font-size: 3vw;
 	}
 
+}
+
+.kc_column, .kc_column_inner {
+	padding: 0px !important;
 }

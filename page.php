@@ -2,9 +2,16 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+	<div id="page-primary" class="content-area">
+		<div class="<?php 
+			// - make sure the method exists
+			// - check the page builder is be using
+			if( function_exists( 'kc_is_using' ) && kc_is_using() ) :
+				echo 'container-full';
+			else :
+				echo 'container';
+			endif;
+		?>">
 		<?php
 		while ( have_posts() ) :
 			the_post();

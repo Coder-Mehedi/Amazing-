@@ -82,75 +82,25 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function amazing_section_title_shortcode($atts) {
-	extract(shortcode_atts( array(
-		'title' => '',
-		'description' => ''
-	), $atts ));
+// function amazing_section_title_shortcode($atts) {
+// 	extract(shortcode_atts( array(
+// 		'title' => '',
+// 		'description' => ''
+// 	), $atts ));
 
-	$amazing_section_title_markup = '';
+// 	$amazing_section_title_markup = '';
 
-	if(!empty($title)) {
-		$amazing_section_title_markup = "<h2>$title</h2>";
-	}
+// 	if(!empty($title)) {
+// 		$amazing_section_title_markup = "<h2>$title</h2>";
+// 	}
 
-	if(!empty($description)) {
-		$amazing_section_title_markup .= "<p>$description</p>";
-	}
+// 	if(!empty($description)) {
+// 		$amazing_section_title_markup .= "<p>$description</p>";
+// 	}
 
-	return $amazing_section_title_markup;
-}
+// 	return $amazing_section_title_markup;
+// }
 
-add_shortcode( 'amazing_section_title', 'amazing_section_title_shortcode' );
-
- 
-add_action('init', 'your_init', 99 );
- 
-function your_init() {
- 
-	if (function_exists('kc_add_map')) { 
-	    kc_add_map(
-	        array(
-
-	            'kc_icon' => array(
-	                'name' => 'Mehedi',
-	                'description' => __('Display single icon', 'KingComposer'),
-	                'icon' => 'sl-paper-plane',
-	                'category' => 'Custom Components',
-	                'params' => array(
-	                    array(
-	                        'name' => 'icon',
-	                        'label' => 'Select Icon',
-	                        'type' => 'icon_picker',
-	                        'admin_label' => true,
-	                    ),
-	                    array(
-	                        'name' => 'icon_size',
-	                        'label' => 'Icon Size',
-	                        'type' => 'text',
-	                        'admin_label' => true,
-	                        'description' => __('Enter font-size for icon such as: 15px, 1em ..etc..', 'KingComposer')
-	                    ),
-	                    array(
-	                        'name' => 'icon_color',
-	                        'label' => 'Icon Color',
-	                        'type' => 'color_picker',
-	                        'admin_label' => true,
-	                        'description' => __('Set color for icon', 'KingComposer')
-	                    )
-	                )
-	            ),  // End of elemnt kc_icon 
-
-	        )
-	    ); // End add map
+// require_once 'kingcomposer/add_map.php';
 
 
-	    add_shortcode( 'kc_icon', 'kc_icon_php_func' );
-
-	    function kc_icon_php_func() {
-	    	echo 'blah blah';
-	    }
-	
-	} // End if
-
-}  
