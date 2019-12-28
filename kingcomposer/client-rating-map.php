@@ -48,7 +48,7 @@ kc_add_map(
 				),
 				'styles'  => array(
 					array(
-						'name'  => 'jd_custom_button_styles',
+						'name'  => 'client_rating_styles',
 						'label' => __( 'Styles', 'amazing' ),
 						'type'  => 'css',
 					)

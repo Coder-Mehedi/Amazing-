@@ -4409,3 +4409,7 @@ thankyou Styles.
 .kc_column, .kc_column_inner {
 	padding: 0px !important;
 }
+
+.fTrialMid amp-img.i-amphtml-element {
+	height: 318px
+}

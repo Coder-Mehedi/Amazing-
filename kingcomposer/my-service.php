@@ -1,33 +1,23 @@
 <?php
-$video_one = explode('/', $atts['video-one'])[3];
-$video_two = explode('/', $atts['video-two'])[3];
-$video_three = explode('/', $atts['video-three'])[3];
-$video_four = explode('/', $atts['video-four'])[3];
+
+
 ?>
 
-
+<?php print_r($atts); ?>
 
 <!-- myServices start -->
 <div class="myServices">
     <div class="mySvsCont">
-    	<h2>My Services</h2>
+    	<h2><?php echo $atts['my_service_section_title'] ?></h2>
         <div class="mySvsMid">
+        <?php foreach($atts['my_services'] as $single_service): ?>
+            <?php $video_id = explode('/', $single_service->video_url)[3]; ?>
             <div class="mySvsIn">
-            	<h6>Zoho products Customization & Training Services</h6>
-				<amp-youtube width="480" height="270" layout="responsive" data-param-modestbranding="1" data-param-rel="1" data-videoid="<?php echo $video_one ?>"></amp-youtube>
+            	<h6><?php echo $single_service->video_top_text ?></h6>
+				<amp-youtube width="480" height="270" layout="responsive" data-param-modestbranding="1" data-param-rel="1" data-videoid="<?php echo $video_id ?>"></amp-youtube>
             </div>
-            <div class="mySvsIn">
-            	<h6>Online Marketing Architect Solution</h6>
-				<amp-youtube width="480" height="270" layout="responsive" data-param-modestbranding="1" data-param-rel="1" data-videoid="<?php echo $video_two ?>"></amp-youtube>
-            </div>
-            <div class="mySvsIn">
-            	<h6>About My Service</h6>
-				<amp-youtube width="480" height="270" layout="responsive" data-param-modestbranding="1" data-param-rel="1" data-videoid="<?php echo $video_three ?>"></amp-youtube>
-            </div>
-            <div class="mySvsIn">
-            	<h6>Web Design Services Architect</h6>
-				<amp-youtube width="480" height="270" layout="responsive" data-param-modestbranding="1" data-param-rel="1" data-videoid="<?php echo $video_four ?>"></amp-youtube>
-            </div>
+        <?php endforeach; ?>
+            
         </div>
         <div class="btnBox">
         	<span>
