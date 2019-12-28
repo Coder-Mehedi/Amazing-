@@ -18,7 +18,7 @@
 <div class="txtImgSec aboutSec-2">
     <div class="imgBox">
         <div class="imgBoxIn">
-        	<amp-img width="838" height="838" layout="responsive" src="image/homeimgBox.jpg" alt="Image"></amp-img>
+        	<amp-img width="838" height="838" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/homeimgBox.jpg" alt="Image"></amp-img>
         </div>
     </div>
     <div class="txtBox">
@@ -53,7 +53,7 @@ My reflections on the first part of my life brought one clear thing to mind. Tha
     </div>
     <div class="imgBox">
         <div>
-            <amp-img width="870" height="485" layout="responsive" src="image/imgBox-2.jpg" alt="Image"></amp-img>
+            <amp-img width="870" height="485" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/imgBox-2.jpg" alt="Image"></amp-img>
         </div>
     </div>
 </div>
@@ -74,10 +74,10 @@ My reflections on the first part of my life brought one clear thing to mind. Tha
 
 <div class="txtImgSec aboutSec-6">
     <div class="imgBox">
-		<amp-img width="898" height="511" layout="responsive" src="image/imgBox-3.jpg" alt="Image"></amp-img>
+		<amp-img width="898" height="511" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/imgBox-3.jpg" alt="Image"></amp-img>
     </div>
     <div class="imgBox">
-		<amp-img width="969" height="511" layout="responsive" src="image/imgBox-4.jpg" alt="Image"></amp-img>
+		<amp-img width="969" height="511" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/imgBox-4.jpg" alt="Image"></amp-img>
     </div>
 </div>
 
@@ -91,13 +91,13 @@ My reflections on the first part of my life brought one clear thing to mind. Tha
 <div class="txtImgSec aboutSec-8">
     <div class="imgBox">
         <div class="imgBoxMid">
-        	<amp-img width="634" height="440" layout="responsive" src="image/imgBox-5.jpg" alt="Image"></amp-img>
+        	<amp-img width="634" height="440" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/imgBox-5.jpg" alt="Image"></amp-img>
         </div>
         <div class="imgBoxMid">
-        	<amp-img width="634" height="470" layout="responsive" src="image/imgBox-6.jpg" alt="Image"></amp-img>
+        	<amp-img width="634" height="470" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/imgBox-6.jpg" alt="Image"></amp-img>
         </div>
         <div class="imgBoxMid">
-        	<amp-img width="634" height="629" layout="responsive" src="image/imgBox-7.jpg" alt="Image"></amp-img>
+        	<amp-img width="634" height="629" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/imgBox-7.jpg" alt="Image"></amp-img>
         </div>
     </div>
     <div class="txtBox">

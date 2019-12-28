@@ -1,9 +1,4 @@
-<?php
-
-
-?>
-
-<?php print_r($atts); ?>
+<?php // print_r($atts); ?>
 
 <!-- myServices start -->
 <div class="myServices">
