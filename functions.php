@@ -102,3 +102,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // }
 
 // require_once 'kingcomposer/add_map.php';
+require_once 'kingcomposer/some-of-my-clients-map.php';
