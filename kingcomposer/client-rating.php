@@ -1,5 +1,5 @@
 <!-- gRating start -->
-<?php print_r($atts) ?>
+
 
 <div class="gRating">
     <div class="gRatingTop">
