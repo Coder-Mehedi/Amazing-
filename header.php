@@ -49,28 +49,14 @@ echo $bufferCss;
             </span>
             <em class="discernible_name">empty</em>
         </button>
-        <nav class="navigation">
-            <ul id="menu" class="menu">
-                <li class="current-menu-item current_page_item"><a href="#">Home</a></li>
-                <li class="menu-item-has-children"><a href="#">About</a>
-                    <ul class="sub-menu">
-                        <li><a href="JavaScript:;">Sub menu item 1</a></li>
-                        <li><a href="JavaScript:;">Sub menu item 2</a></li>
-                        <li><a href="JavaScript:;">Sub menu item 3</a></li>
-                        <li><a href="JavaScript:;">Sub menu item 4</a></li>
-                        <li><a href="JavaScript:;">Sub menu item 5</a></li>
-                        <li><a href="JavaScript:;">Sub menu item 6</a></li>
-                        <li><a href="JavaScript:;">Sub menu item 7</a></li>
-                        <li><a href="JavaScript:;">Sub menu item 8</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Business Coaching</a></li>
-                <li><a href="#">Zoho Services</a></li>
-                <li><a href="#">My Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        
+        <?php wp_nav_menu( array(
+            'theme_location'  => 'menu-1',
+            'container'       => 'nav',
+            'container_class' => 'menu-{menu-slug}-container navigation',
+            'menu_class'      => 'menu',
+            'menu_id'         => 'menu',
+        ) ); ?>
     </div>
 </header>
 <!-- Header area end -->

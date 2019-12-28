@@ -1,3 +1,8 @@
+<?php
+$left_button = explode('|', $atts['left-button']);
+$right_button = explode('|', $atts['right-button']);
+?>
+
 <!-- Banner start -->
 <div class="banner">
     <div class="bnrIn">
@@ -8,8 +13,8 @@
             <div class="homeBnrTxt">
                 <h1><?php echo $atts['heading_text'] ?></h1>
                 <p><?php echo $atts['banner_description'] ?></p>
-                <a class="bnrBtn1" href="<?php echo $atts['left_button_url'] ?>"><?php echo $atts['left_button_text'] ?></a>
-                <a class="bnrBtn2" href="<?php echo $atts['right_button_url'] ?>"><?php echo $atts['right_button_text'] ?></a>
+                <a class="bnrBtn1" href="<?php echo $left_button[0] ?>"><?php echo $left_button[1] ?></a>
+                <a class="bnrBtn2" href="<?php echo $right_button[0] ?>"><?php echo $right_button[1] ?></a>
             </div>
         </div>       
     </div>
