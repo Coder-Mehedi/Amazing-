@@ -23,5 +23,5 @@
 </div>
 <!-- myServices end -->
 
-<?php //print_r($atts) ?>
+<?php // print_r($atts) ?>
 

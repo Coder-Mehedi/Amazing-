@@ -22,7 +22,6 @@ kc_add_map(
 						'label'       => __( 'Services', 'amazing' ),
 						'name'        => 'my_services',
 						'description' => __( 'Add A Services', 'amazing' ),
-						
 						'params'      => array(
 							array(
 								'name'        => 'video_top_text',

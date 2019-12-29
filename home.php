@@ -66,21 +66,20 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_po
             </div>
         </div>
 	<?php endwhile; ?>
+<?php endif; ?>
 
     </div>
     <ul class="pagination">
-    	<?php $pagi_args = array('prev_text' => 'Prev',
-	    'next_text' => 'Next',
-	    'mid_size' => 1
-	     ); 
-	?>
-    <?php echo paginate_links($pagi_args); ?>
+    	
+    <?php echo paginate_links(array('prev_text' => 'Prev',
+        'next_text' => 'Next',
+        'mid_size' => 1
+         )); ?>
     </ul>
     
 </div>
 <!-- Blog end -->
 
 
-<?php endif; ?>
 
 <?php get_footer( ); ?>

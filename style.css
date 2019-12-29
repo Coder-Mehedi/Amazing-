@@ -4417,3 +4417,11 @@ thankyou Styles.
 .pPersonPhoto amp-img {
 	border-radius: 50%;
 }
+
+.black-section-title {
+	color: black;
+}
+
+.white-section-title {
+	color: white;
+}
