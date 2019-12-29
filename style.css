@@ -2907,8 +2907,8 @@ h2::after {
 	padding-top: 0
 }
 
-.pagination li {
-	margin: 0 10px;
+.pagination li, .pagination a {
+	margin: 0 5px;
 	display: inline-block;
 	background: #434344;
 	background: -moz-linear-gradient(top, #434344 0%, #282728 100%);
@@ -2928,7 +2928,7 @@ h2::after {
 	font-size: 0.536em;/*15*/
 }
 
-.pagination li:hover {
+.pagination li:hover, .pagination a:hover {
 	background: #282728;
 	background: -moz-linear-gradient(top, #282728 0%, #434344 100%);
 	background: -webkit-linear-gradient(top, #282728 0%, #434344 100%);
@@ -2945,7 +2945,7 @@ h2::after {
 	display: block;
 }
 
-.vdoSitebar .pagination li a, .vdoSitebar .pagination li span {
+.vdoSitebar .pagination li a, .vdoSitebar .pagination li span, .pagination a {
 	padding: 0 15px
 }
 
