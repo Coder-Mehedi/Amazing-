@@ -4413,3 +4413,7 @@ thankyou Styles.
 .fTrialMid amp-img.i-amphtml-element {
 	height: 318px
 }
+
+.pPersonPhoto amp-img {
+	border-radius: 50%;
+}

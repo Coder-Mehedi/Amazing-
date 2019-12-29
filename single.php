@@ -63,5 +63,6 @@ if ( comments_open() || get_comments_number() ) :
 	// comments_template();
 endif;
  ?>
+<?php wpb_set_post_views(get_the_ID()); ?>
 <?php endwhile; ?>
 <?php get_footer() ?>
