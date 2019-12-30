@@ -8,7 +8,6 @@ kc_add_map(
 			'admin_view' => __( 'Client Rating', 'amazing' ),
 			'icon'       => 'fa-leaf',
 			'category'   => 'Amazing Shortcode',
-
 			'css_box'    => true,
 			'params'     => array(
 				'general' => array(

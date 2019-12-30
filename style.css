@@ -4418,10 +4418,6 @@ thankyou Styles.
 	border-radius: 50%;
 }
 
-.black-section-title {
-	color: black;
-}
-
-.white-section-title {
-	color: white;
+.aboutSec-8 .kc_text_block, .aboutSec-4 .kc_text_block, .aboutSec-2 .kc_text_block {
+	padding: 30px;
 }
