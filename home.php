@@ -36,6 +36,8 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_po
                 <span class="postDate"><?php echo get_the_date() ?></span>
             </div>
         </div>
+        <!-- reset the main query loop -->
+        <?php wp_reset_postdata(); ?>
     <?php endwhile; ?>
 <?php endif; ?>
     

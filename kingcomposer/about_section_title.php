@@ -10,4 +10,4 @@ $title_color   = $atts['amazing_title_color'];
     </h2>
 </div>
 
-<?php print_r($atts) ?>
+<?php // print_r($atts) ?>

@@ -78,30 +78,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
-// function amazing_section_title_shortcode($atts) {
-// 	extract(shortcode_atts( array(
-// 		'title' => '',
-// 		'description' => ''
-// 	), $atts ));
-
-// 	$amazing_section_title_markup = '';
-
-// 	if(!empty($title)) {
-// 		$amazing_section_title_markup = "<h2>$title</h2>";
-// 	}
-
-// 	if(!empty($description)) {
-// 		$amazing_section_title_markup .= "<p>$description</p>";
-// 	}
-
-// 	return $amazing_section_title_markup;
-// }
-
-// require_once 'kingcomposer/add_map.php';
 require_once 'kingcomposer/client-rating-map.php';
 require_once 'kingcomposer/my-service-map.php';
 
