@@ -36,7 +36,7 @@ echo $bufferCss;
 <header class="header">
     <div class="hdrIn">
         <a id="logo" href="#">
-            <amp-img width="294" height="89" layout="responsive" src="<?php echo get_template_directory_uri() ?>/image/logo.png" alt="Amazing"></amp-img>
+            <amp-img width="294" height="89" layout="responsive" src="<?php the_field('header_logo', 'option'); ?>" alt="Amazing"></amp-img>
             <em class="discernible_name">empty</em>
         </a>
         <button id="menuBtn" on="tap:menu.toggleClass(class='toggleMenu')" title="Title">

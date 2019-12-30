@@ -26,11 +26,13 @@
     	<amp-img width="1067" height="562" layout="responsive" src="<?php the_post_thumbnail_url( ); ?>" alt="single image"></amp-img>
         <?php the_content( ); ?>
         <div class="sbBtm">
+            <?php $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+
             <ul class="socialLink">
-            	<li class="facebook"><a href="#"></a></li>
-            	<li class="twitter"><a href="#"></a></li>
-            	<li class="linkedin"><a href="#"></a></li>
-            	<li class="link"><a href="#"></a></li>
+            	<li class="facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u=<?php echo $actual_link; ?>"></a></li>
+            	<li class="twitter"><a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $actual_link ?>"></a></li>
+            	<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $actual_link ?>"></a></li>
+            	<li class="link"><a target="_blank" href="<?php echo $actual_link; ?>"></a></li>
             	<li class="heart"><a href="#"></a></li>
             </ul>
             <div class="sbBtmBtn">
