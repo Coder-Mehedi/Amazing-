@@ -4421,3 +4421,7 @@ thankyou Styles.
 .aboutSec-8 .kc_text_block, .aboutSec-4 .kc_text_block, .aboutSec-2 .kc_text_block {
 	padding: 30px;
 }
+
+.grBtmIn li {
+	width: 150px;
+}

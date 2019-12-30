@@ -43,6 +43,25 @@ kc_add_map(
 								'description' => __( 'Enter Review Text', 'amazing' ),
 							),
 						)
+					),
+					array(
+						'type'        => 'group',
+						'label'       => __( 'More Reviews On', 'amazing' ),
+						'name'        => 'amazing_more_reviews',				
+						'params'      => array(
+							array(
+								'name'        => 'client_logo',
+								'label'       => __( 'Client Company Logo', 'amazing' ),
+								'type'        => 'attach_image_url',
+								'description' => __( 'Client Company Logo', 'amazing' ),
+							),
+							array(
+								'name'        => 'client_company_url',
+								'label'       => __( 'Client Company URL', 'amazing' ),
+								'type'        => 'text',
+								'description' => __( 'Enter Company Website URL', 'amazing' ),
+							),
+						)
 					)
 				),
 				'styles'  => array(

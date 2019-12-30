@@ -35,7 +35,7 @@ echo $bufferCss;
 <!-- Header start -->
 <header class="header">
     <div class="hdrIn">
-        <a id="logo" href="#">
+        <a id="logo" href="<?php site_url() ?>">
             <amp-img width="294" height="89" layout="responsive" src="<?php the_field('header_logo', 'option'); ?>" alt="Amazing"></amp-img>
             <em class="discernible_name">empty</em>
         </a>
