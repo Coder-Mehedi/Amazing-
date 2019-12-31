@@ -10,6 +10,8 @@
 </div>
 <!-- Banner end -->
 
+
+
 <?php while ( have_posts() ) : the_post(); ?>
 
 <!-- Blog start -->
@@ -33,7 +35,13 @@
             	<li class="twitter"><a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $actual_link ?>"></a></li>
             	<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $actual_link ?>"></a></li>
             	<li class="link"><a target="_blank" href="<?php echo $actual_link; ?>"></a></li>
-            	<li class="heart"><a href="#"></a></li>
+            <?php //if(isset($_COOKIE['liked'])): ?>
+            <div class="heart-container">
+            	<!-- <li class="heart"><a href="<?php the_permalink( ) ?>#liked"></a></li> -->
+                <img src="image/red_heart.png" alt="">
+            </div>
+
+            <?php //endif; ?>
             </ul>
             <div class="sbBtmBtn">
                 <div>
@@ -67,4 +75,23 @@ endif;
  ?>
 <?php wpb_set_post_views(get_the_ID()); ?>
 <?php endwhile; ?>
+<?php print_r($_COOKIE) ?>
+<script>
+    const heart = document.querySelector('.heart')
+    const heart_container = document.querySelector('.heart-container')
+    console.log(heart_container)
+    console.log(document.cookie = 'liked=false')
+
+    heart_container.addEventListener('click', () => {
+        let cookies = document.cookie.match('liked=true');
+        if(cookies){
+            document.cookie = "liked=false"
+            heart_container.innerHTML = '<li class="heart"><a href="<?php the_permalink( ) ?>#liked"></a></li>'
+            
+        }else {
+            document.cookie = "liked=true"
+            heart_container.innerHTML = '<li class="red-heart"><a href="<?php the_permalink( ) ?>#liked"></a></li>'
+        }
+    })
+</script>
 <?php get_footer() ?>

@@ -31,6 +31,16 @@ kc_add_map(
 								'description' => __( 'Enter Client Who Rate This', 'amazing' ),
 							),
 							array(
+								'name'        => 'client_rating_point',
+								'label'       => __( 'Client Rating Point', 'amazing' ),
+								'type'        => 'number_slider',
+								'options' => array(    // REQUIRED
+									'min' => 0,
+									'max' => 5,
+									'show_input' => true
+								),
+							),
+							array(
 								'name'        => 'client_logo',
 								'label'       => __( 'Client Company Logo', 'amazing' ),
 								'type'        => 'attach_image_url',

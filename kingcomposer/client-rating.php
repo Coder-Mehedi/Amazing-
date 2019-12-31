@@ -12,7 +12,34 @@
                     <div class="slideMid">
                         <p>"<?php echo $single_review->client_rating_text ?>"</p>
                     </div>
-                    <span class="star"><amp-img width="243" height="41" layout="intrinsic" src="<?php echo get_template_directory_uri() ?>/image/star.png" alt="star"></amp-img></span>
+                    <span class="star">
+                <?php if($single_review->client_rating_point == 5): ?>
+
+                        <amp-img width="243" height="41" layout="intrinsic" src="<?php echo get_template_directory_uri() ?>/image/five_star.png" alt="star"></amp-img>
+
+                
+                <?php elseif($single_review->client_rating_point == 4): ?>
+
+                        <amp-img width="243" height="41" layout="intrinsic" src="<?php echo get_template_directory_uri() ?>/image/four_star.png" alt="star"></amp-img>
+                        
+                <?php elseif($single_review->client_rating_point == 3): ?>
+
+                        <amp-img width="243" height="41" layout="intrinsic" src="<?php echo get_template_directory_uri() ?>/image/three_star.png" alt="star"></amp-img>
+                        
+                <?php elseif($single_review->client_rating_point == 2): ?>
+
+                        <amp-img width="243" height="41" layout="intrinsic" src="<?php echo get_template_directory_uri() ?>/image/two_star.png" alt="star"></amp-img>
+                        
+                <?php elseif($single_review->client_rating_point == 1): ?>
+
+                        <amp-img width="243" height="41" layout="intrinsic" src="<?php echo get_template_directory_uri() ?>/image/one_star.png" alt="star"></amp-img>
+                        
+                <?php elseif($single_review->client_rating_point == 0): ?>
+
+                        <amp-img width="243" height="41" layout="intrinsic" src="<?php echo get_template_directory_uri() ?>/image/no_star.png" alt="star"></amp-img>
+                        
+                <?php endif; ?>
+                    </span>
                     <h6><?php echo $single_review->client_name_who_rates ?></h6>
                 </div>
         <?php endforeach; ?>
@@ -40,4 +67,4 @@
 </div>
 <!-- gRating end -->
 
-<?php //print_r($atts); ?>
+<?php // print_r($atts); ?>
