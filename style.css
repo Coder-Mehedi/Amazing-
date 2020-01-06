@@ -4432,3 +4432,15 @@ thankyou Styles.
 	display: block;
 	background: url(image/red_heart.png) no-repeat left top;
 }
+
+.heart-container {
+	position: absolute;
+	right: 100px;
+	cursor: pointer;
+}
+
+img.red-heart {
+	position: absolute;
+	right: 0;
+	width: 30px;
+}

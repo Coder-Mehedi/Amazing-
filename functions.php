@@ -31,12 +31,6 @@ if ( ! function_exists( 'amazing_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// add_theme_support( 'custom-logo', array(
-		// 	'height'      => 250,
-		// 	'width'       => 250,
-		// 	'flex-width'  => true,
-		// 	'flex-height' => true,
-		// ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'amazing_setup' );
@@ -66,6 +60,8 @@ add_action( 'widgets_init', 'amazing_widgets_init' );
 function amazing_scripts() {
 	wp_enqueue_style( 'amazing-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'love_like', get_template_directory_uri() . '/js/love_like.js', array(), '1.0', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -82,6 +78,7 @@ require get_template_directory() . '/inc/customizer.php';
 require_once 'kingcomposer/client-rating-map.php';
 require_once 'kingcomposer/my-service-map.php';
 
+// Post view count
 function wpb_set_post_views($postID) {
     $count_key = 'wpb_post_views_count';
     $count = get_post_meta($postID, $count_key, true);
@@ -96,6 +93,8 @@ function wpb_set_post_views($postID) {
 }
 //To keep the count accurate, lets get rid of prefetching
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+
 
 
 
