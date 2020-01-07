@@ -78,9 +78,9 @@ endif;
 
 <?php $data = array(
     'post_id' => get_the_ID(),
+    'user_id' => get_current_user_id(),
     'template_path' => get_template_directory_uri(),
     'permalink' => get_the_permalink( )
 );
 wp_localize_script( 'love_like', 'post_info', $data ) ?>
-
 <?php get_footer() ?>

@@ -74,7 +74,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
-
 require_once 'kingcomposer/client-rating-map.php';
 require_once 'kingcomposer/my-service-map.php';
 
@@ -93,9 +92,6 @@ function wpb_set_post_views($postID) {
 }
 //To keep the count accurate, lets get rid of prefetching
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-
-
-
 
 
 // KingComposer
@@ -118,17 +114,6 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 	
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Theme Header Settings',
-	// 	'menu_title'	=> 'Header',
-	// 	'parent_slug'	=> 'theme-general-settings',
-	// ));
-	
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Theme Footer Settings',
-	// 	'menu_title'	=> 'Footer',
-	// 	'parent_slug'	=> 'theme-general-settings',
-	// ));
 	
 }
 

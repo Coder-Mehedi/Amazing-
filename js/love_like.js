@@ -1,4 +1,4 @@
-const { template_path, post_id, permalink } = post_info
+const { template_path, post_id, user_id, permalink } = post_info
 
 const setCookie = (cookie_name, cookie_value, expire_in_days) => {
         let d = new Date();
@@ -26,7 +26,14 @@ const getCookie = (cookie_name) => {
 getCookie('loved') == 'true' ? true : false
 const heart = document.querySelector('.heart')
 const heart_container = document.querySelector('.heart-container')
+const result = document.getElementById('result')
 let cookies = getCookie(post_id) == 'true' ? true : false
+
+if(cookies){
+    heart_container.innerHTML = `<img class="red-heart" src="${template_path}/image/red_heart.png" alt="">`
+}else {
+    heart_container.innerHTML = `<li class="heart"><a href="${permalink}#liked"></a></li>`
+}
 
 heart_container.addEventListener('click', () => {
     cookies = !cookies
@@ -45,26 +52,19 @@ heart_container.addEventListener('click', () => {
         console.log(newCookie)
     }
 
-    const result = document.getElementById('result')
 
-    jQuery.ajax({
-        type: "POST",
-        url: template_path+'/inc/post_like.php',
-        dataType: 'json',
-        data: {functionName: 'set_post_like', id: post_id},
 
-        success: function(result){
-            result.innerHTML = result;
-        }
 
-    });
-
+            
+    jQuery.post(
+        template_path+'/inc/post_like.php',  // URL
+        { post_id , user_id }, // data to be submit
+       function(data, status, jqXHR) {// success callback
+                result.append('status: ' + status + ', data: ' + data);
+        }).done(() => console.log('request done'))
+          .fail((jqxhr, settings, ex) => alert('failed, ' + ex));
 })
 
-if(cookies){
-    heart_container.innerHTML = `<img class="red-heart" src="${template_path}/image/red_heart.png" alt="">`
-}else {
-    heart_container.innerHTML = `<li class="heart"><a href="${permalink}#liked"></a></li>`
-}
+
 
 
