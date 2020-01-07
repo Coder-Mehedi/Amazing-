@@ -34,12 +34,48 @@ let cookies = getCookie(post_id) == 'true' ? true : false
 // }else {
 //     heart_container.innerHTML = `<li class="heart"><a href="${permalink}#liked"></a></li>`
 // }
+console.log(user_id)
+if(user_id === '0'){
+    
+    if(cookies){
+        heart_container.innerHTML = `<img class="red-heart" src="${template_path}/image/red_heart.png" alt="">`
+        setCookie(post_id, true, 1)
+
+        const newCookie = {id: post_id, loved: true}
+        console.log(newCookie)
+    }else {
+        heart_container.innerHTML = `<li class="heart"><a href="${permalink}#liked"></a></li>`
+        setCookie(post_id, false, 1)
+
+        const newCookie = {id: post_id, loved: false}
+        console.log(newCookie)
+    }
+
+
+    heart_container.addEventListener('click', () => {
+        cookies = !cookies
+       
+       
+
+        if(cookies){
+            heart_container.innerHTML = `<img class="red-heart" src="${template_path}/image/red_heart.png" alt="">`
+            setCookie(post_id, true, 1)
+
+            const newCookie = {id: post_id, loved: true}
+            console.log(newCookie)
+        }else {
+            heart_container.innerHTML = `<li class="heart"><a href="${permalink}#liked"></a></li>`
+            setCookie(post_id, false, 1)
+
+            const newCookie = {id: post_id, loved: false}
+            console.log(newCookie)
+        }
+    })
+}
 
 
 
-
-
-if(user_id !== 0){
+if(user_id !== '0'){
     jQuery.post(
         template_path+'/inc/post_like.php',  // URL
         { post_id , user_id, funcName: 'get_post_like'  }, // data to be submit
