@@ -60,7 +60,7 @@ add_action( 'widgets_init', 'amazing_widgets_init' );
 function amazing_scripts() {
 	wp_enqueue_style( 'amazing-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'love_like', get_template_directory_uri() . '/js/love_like.js', array(), '1.0', true );
+	wp_enqueue_script( 'love_like', get_template_directory_uri() . '/js/love_like.js', array('jquery'), '1.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

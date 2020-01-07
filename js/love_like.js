@@ -45,21 +45,20 @@ heart_container.addEventListener('click', () => {
         console.log(newCookie)
     }
 
-    jQuery.ajax({
-    type: "POST",
-    url: template_path+'/inc/post_like.php',
-    dataType: 'JSON',
-    data: {functionName: 'set_post_like', arguments: post_id},
+    const result = document.getElementById('result')
 
-    success: function (obj, textstatus) {
-          if( !('error' in obj) ) {
-              yourVariable = obj.result;
-          }
-          else {
-              console.log(obj.error);
-          }
-    }
-});
+    jQuery.ajax({
+        type: "POST",
+        url: template_path+'/inc/post_like.php',
+        dataType: 'json',
+        data: {functionName: 'set_post_like', id: post_id},
+
+        success: function(result){
+            result.innerHTML = result;
+        }
+
+    });
+
 })
 
 if(cookies){

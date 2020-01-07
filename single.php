@@ -41,9 +41,10 @@
             <?php //endif; ?>
             </ul>
             <div class="sbBtmBtn">
-                <div>
-                	<a class="btn" href="#">See All</a>
-                </div>
+            <div>
+            	<a class="btn" href="#">See All</a>
+            </div>
+            <div id="result"></div>
 
 <?php
 $prev_post = get_adjacent_post(false, '', true);
