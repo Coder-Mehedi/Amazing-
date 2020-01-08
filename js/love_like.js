@@ -1,9 +1,10 @@
-// from single.php
+// from single.php Localized Data
 const { template_path, post_id, user_id, permalink } = post_info
 
 // DOM QUERY
 const heart_container = document.querySelector('.heart-container')
 // const result = document.getElementById('result')
+
 
 // Cookie Setter Function
 const setCookie = (cookie_name, cookie_value, expire_in_days) => {
@@ -29,6 +30,8 @@ const getCookie = (cookie_name) => {
     }
     return "";
 }
+
+let cookies = getCookie(post_id) == 'true' ? true : false
 
 // Logged Out User Function
 const getPostLikeLoggedOutUser = () => {
@@ -71,15 +74,20 @@ const getPostLikeLoggedInUser = () => {
         template_path+'/inc/post_like.php',  // URL
         { post_id , user_id, funcName: 'get_post_like'  }, // data to be submit
         function(data, status, jqXHR) {// success callback
-            // console.log(data)
+            // console.log(JSON.parse(data))
+            data = JSON.parse(data)
+            let todo = null
+            if(data.user_id == user_id && data.post_id == post_id){
+                todo = data.liked
+            }
 
-            if(data){
+            if(todo){
                 heart_container.innerHTML = `<img class="red-heart" src="${template_path}/image/red_heart.png" alt="">`
             }else {
                 heart_container.innerHTML = `<li class="heart"><a href="${permalink}#liked"></a></li>`
             }
 
-            // result.append('status: ' + status + ', data: ' + data);
+            //result.append('data: ' + data);
         })
         .done(() => console.log('request done'))
         .fail((jqxhr, settings, ex) => alert('failed, ' + ex));
@@ -89,15 +97,21 @@ const setPostLikeLoggedInUser = () => {
     jQuery.post(
         template_path+'/inc/post_like.php',  // URL
         { post_id , user_id, funcName: 'set_post_like' }, // data to be submit
-       function(data, status, jqXHR) {// success callback
+       function(data = '', status, jqXHR) {// success callback
+            console.log(JSON.parse(data))
+            data = JSON.parse(data)
+            let todo = null
+            if(data.user_id == user_id && data.post_id == post_id){
+                todo = data.liked
+            }
 
-            if(data){
+            if(todo){
                 heart_container.innerHTML = `<img class="red-heart" src="${template_path}/image/red_heart.png" alt="">`
             }else {
                 heart_container.innerHTML = `<li class="heart"><a href="${permalink}#liked"></a></li>`
             }
 
-            // result.append('status: ' + status + ', data: ' + data);
+            // result.append('data: ' + data);
         }).done(() => console.log('request done'))
           .fail((jqxhr, settings, ex) => alert('failed, ' + ex));
 }
@@ -107,7 +121,7 @@ const setPostLikeLoggedInUser = () => {
 // String to Boolean Conversion
 // getCookie('loved') == 'true' ? true : false
 
-let cookies = getCookie(post_id) == 'true' ? true : false
+
 
 // If User Not Logged In then using Cookie
 if(user_id === '0'){

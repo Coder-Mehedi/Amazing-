@@ -82,5 +82,13 @@ endif;
     'template_path' => get_template_directory_uri(),
     'permalink' => get_the_permalink( )
 );
+
 wp_localize_script( 'love_like', 'post_info', $data ) ?>
 <?php get_footer() ?>
+
+<?php
+$liked_meta_key = 'post_like_count';
+$liked = get_post_meta(get_the_ID(), $liked_meta_key, true);
+print_r(unserialize($liked));
+
+ ?>

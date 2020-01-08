@@ -62,9 +62,6 @@ function amazing_scripts() {
 
 	wp_enqueue_script( 'love_like', get_template_directory_uri() . '/js/love_like.js', array('jquery'), '1.0', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'amazing_scripts' );
 
